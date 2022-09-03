@@ -1,7 +1,17 @@
 import React from "react";
 
 const FormFields = () => {
-  return <div>FormFields</div>;
+  return (
+    <div>
+      <form>
+        <input placeholder="FirstName" />
+        <input placeholder="SurName" />
+        <input placeholder="City" />
+        <input placeholder="Postal Code" />
+        <button>Order & Pay</button>
+      </form>
+    </div>
+  );
 };
 
 export default FormFields;

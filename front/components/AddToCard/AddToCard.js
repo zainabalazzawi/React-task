@@ -1,7 +1,7 @@
 import React from "react";
 
-const AddCard = () => {
-  return <div>AddCard</div>;
+const AddToCard = () => {
+  return <button>Add To Card</button>;
 };
 
-export default AddCard;
+export default AddToCard;
