@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header title="Books" />
-      <main className="text-neutral-900 px-30">
+      <main className="text-neutral-900 p-8 ">
         <Books addItem={addItem} removeItem={removeItem} hasItem={hasItem} />
       </main>
     </div>

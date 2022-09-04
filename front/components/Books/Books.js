@@ -5,7 +5,7 @@ import useFetch from "../Hooks/useFetch";
 const Books = ({ addItem, removeItem, hasItem, addToCart }) => {
   const { data } = useFetch("http://localhost:3001/api/book?limit=100");
   return (
-    <div>
+    <div className="inline-grid grid-cols-3 gap-4">
       {data.map((book) => {
         return (
           <Book

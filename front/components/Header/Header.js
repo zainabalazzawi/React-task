@@ -8,8 +8,9 @@ const Header = ({ title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div>{title}</div>
+
       <Navigation />
+      <div className="text-4xl text-lime-900 ml-6 mt-6">{title}</div>
     </div>
   );
 };

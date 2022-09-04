@@ -3,10 +3,10 @@ import FormFields from "../components/FormFields/FormFields";
 
 export default function Order() {
   return (
-    <div className={styles.container}>
+    <div className="">
       <Header title="Order" />
 
-      <main className={styles.main}>
+      <main>
         Order
         <FormFields />
       </main>

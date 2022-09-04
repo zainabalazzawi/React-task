@@ -22,9 +22,9 @@ export default function ShoppingCart() {
     }
   }, []);
   return (
-    <div className={styles.container}>
+    <div>
       <Header title="ShoppingCart" />
-      <main className={styles.main}>ShoppingCart items</main>
+      <main>ShoppingCart items</main>
       {isEmpty && <div> Your cart is empty.</div>}
       {!isEmpty && (
         <div>
