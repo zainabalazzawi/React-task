@@ -1,13 +1,27 @@
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
 import { useStateContext } from "../state";
+import { useEffect } from "react";
 
 export default function ShoppingCart() {
   const {
     state: { cart },
     removeItem,
     isEmpty,
+    setState,
+    state,
   } = useStateContext();
+
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+  }, [state]);
+
+  useEffect(() => {
+    const state = JSON.parse(localStorage.getItem("state"));
+    if (state) {
+      setState(state);
+    }
+  }, []);
   return (
     <div className={styles.container}>
       <Header title="ShoppingCart" />
@@ -16,9 +30,8 @@ export default function ShoppingCart() {
       {!isEmpty && (
         <div>
           {Object.entries(cart).map(([id, amount]) => (
-            <div>
-              {" "}
-              id: {id}, amount: {amount}{" "}
+            <div key={id}>
+              id: {id}, amount: {amount}
               <button onClick={() => removeItem(id)}>remove</button>
             </div>
           ))}
@@ -27,13 +40,3 @@ export default function ShoppingCart() {
     </div>
   );
 }
-
-// {
-//   shoppingCart.length > 0 && (
-//     <div>
-//       {shoppingCart.map((book) => (
-//         <div key={book.id}>{book.title}</div>
-//       ))}
-//     </div>
-//   );
-// }

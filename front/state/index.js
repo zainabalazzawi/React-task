@@ -67,6 +67,7 @@ export function StateProvider({ children }) {
         removeItem,
         clearItems,
         hasItem,
+        setState,
       }}
     >
       {children}

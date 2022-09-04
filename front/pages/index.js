@@ -10,14 +10,7 @@ export default function Home() {
     <div className={styles.container}>
       <Header title="Books" />
       <main className={styles.main}></main>
-      <button onClick={() => addItem(1234)}>add 1234</button>
-      {hasItem(1234) && (
-        <button onClick={() => removeItem(1234)}>remove 1234</button>
-      )}
-      <button onClick={() => addItem(5678)}>add 5678</button>
-      {hasItem(5678) && (
-        <button onClick={() => removeItem(5678)}>remove 5678</button>
-      )}
+      <Books addItem={addItem} removeItem={removeItem} hasItem={hasItem} />
     </div>
   );
 }
