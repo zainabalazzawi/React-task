@@ -1,4 +1,3 @@
-import styles from "../styles/Home.module.css";
 import Header from "../components/Header/Header";
 import FormFields from "../components/FormFields/FormFields";
 

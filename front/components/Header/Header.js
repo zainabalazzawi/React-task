@@ -7,7 +7,6 @@ const Header = ({ title }) => {
     <div>
       <Head>
         <title>{title}</title>
-        <link rel="stylesheet" href="styles.css" />
       </Head>
       <div>{title}</div>
       <Navigation />
