@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import { useStateContext } from "../state";
-import { useEffect } from "react";
+import Link from "next/link";
 
 export default function ShoppingCart() {
   const {
@@ -11,10 +11,10 @@ export default function ShoppingCart() {
 
   return (
     <div className="bg-yellow-50">
-      <Header title="ShoppingCart" />
+      <Header title="Shopping Cart" />
       <main className="inline-grid grid-rows-[0fr,0.7fr,0fr] gap-2 p-8  pl-10 w-full justify-items-center h-screen">
         <div className="text-lg pl-6 justify-self-start text-green-900">
-          ShoppingCart items
+          Shopping Cart items
         </div>
 
         <div className="w-full rounded-md inline-grid justify-items-start items-start">
@@ -43,10 +43,11 @@ export default function ShoppingCart() {
             </div>
           )}
         </div>
-
-        <button className="bg-green-800 text-yellow-100 py-3 px-9 justify-self-end rounded-md mr-6">
-          Next
-        </button>
+        <Link href="/orders">
+          <button className="bg-green-800 text-yellow-100 py-3 px-9 justify-self-end rounded-md mr-6">
+            Next
+          </button>
+        </Link>
       </main>
     </div>
   );
