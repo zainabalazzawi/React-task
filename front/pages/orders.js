@@ -6,9 +6,16 @@ export default function Orders() {
     <div className="">
       <Header title="Orders" />
 
-      <main>
-        Orders
-        <FormFields />
+      <main className=" inline-grid  grid-cols-[1fr,1fr] p-5 justify-items-center items-centers w-full">
+        <div
+          className="justify-self-start ml-3
+        mt-3 text-lg "
+        >
+          your Order
+        </div>
+        <div className=" ">
+          <FormFields />
+        </div>
       </main>
     </div>
   );
