@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const Context = createContext();
 
@@ -56,6 +56,19 @@ export function StateProvider({ children }) {
     return acc + current;
   }, 0);
 
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+    // console.log(state);
+  }, [state]);
+
+  useEffect(() => {
+    const cartState = JSON.parse(localStorage.getItem("state"));
+    if (cartState) {
+      setState(cartState);
+    }
+    console.log(cartState);
+  }, []);
+
   return (
     <Context.Provider
       value={{
@@ -67,7 +80,6 @@ export function StateProvider({ children }) {
         removeItem,
         clearItems,
         hasItem,
-        setState,
       }}
     >
       {children}

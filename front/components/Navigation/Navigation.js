@@ -16,7 +16,7 @@ const Navigation = () => {
         </li>
 
         <li>
-          <Link href="order"> Order</Link>
+          <Link href="orders"> Orders</Link>
         </li>
       </ul>
     </div>

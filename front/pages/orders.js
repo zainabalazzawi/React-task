@@ -1,13 +1,13 @@
 import Header from "../components/Header/Header";
 import FormFields from "../components/FormFields/FormFields";
 
-export default function Order() {
+export default function Orders() {
   return (
     <div className="">
-      <Header title="Order" />
+      <Header title="Orders" />
 
       <main>
-        Order
+        Orders
         <FormFields />
       </main>
     </div>

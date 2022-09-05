@@ -3,7 +3,7 @@ import React from "react";
 const FormFields = () => {
   return (
     <div>
-      <form>
+      <form className="inline-grid grid-rows-4 gap-4 ">
         <input placeholder="FirstName" />
         <input placeholder="SurName" />
         <input placeholder="City" />
