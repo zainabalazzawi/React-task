@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.8",
     "babel-plugin-styled-components": "^2.0.7",
+    "formik": "^2.2.9",
     "next": "12.2.5",
     "postcss": "^8.4.16",
     "react": "18.2.0",
